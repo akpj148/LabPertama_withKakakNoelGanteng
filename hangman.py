@@ -81,8 +81,10 @@ def main():
     if userInput == word:
       print("you've done it")
       break
-
-    if userInput in word and userInput != "" and userInput != " ":
+    
+    if len(userInput) > 1 or userInput in "12346890":
+      print("hanya boleh 1 kata dan bukan angka")
+    elif userInput in word and userInput != "" and userInput != " ":
       print(f"terdapat {userInput} didalam kata tersebut. (\"close1\" to exit)")
       for i in range(lengthWord):
         if userInput == word[i]:

@@ -5,9 +5,6 @@ def randomWord(yea):
     3: "FRIEND",
     4: "HELLO",
   }
-  yea +=1
-  if yea > 4:
-    yea = 1
   return words[yea]
 
 def life(lifes):
@@ -75,6 +72,7 @@ def main():
   
   life(lifes)
 
+  y = len(guess)
   while True:
     for i in range(len(guess)):
       print(guess[i]+" ", end="")
@@ -84,7 +82,7 @@ def main():
       print(wordGuess[i]+" ", end="")
     print("\n")
 
-    if "_" not in guess:
+    if y < 1:
       print("you've done it!")
       break
 
@@ -106,6 +104,7 @@ def main():
       for i in range(lengthWord):
         if userInput == word[i]:
           guess[i] = userInput
+          y-=1
     else:
       wordGuess.append(userInput)
       print(f"tidak ada {userInput} didalam kata tersebut. (\"close1\" to exit)")

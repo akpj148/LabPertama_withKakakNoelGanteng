@@ -4,7 +4,7 @@ def randomWord(yea):
     2: "PAN",
     3: "HELLO"
   }
-  if yea > len(words):
+  while yea > len(words):
     yea -=len(words)
   return words[yea]
 #-----------------------------------------------
@@ -125,7 +125,7 @@ def main(yea = 1):
       lifes-=1
       life(lifes)
       if lifes <= 0:
-        print("you lose")
+        print("--------- you lose ---------")
         break
       
 main()

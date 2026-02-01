@@ -1,12 +1,3 @@
-def randomWord(yea):
-  words = {
-    1: "WALKING",
-    2: "PAN",
-    3: "HELLO"
-  }
-  while yea > len(words):
-    yea -=len(words)
-  return words[yea]
 #-----------------------------------------------
 def life(lifes):
   theMan = {

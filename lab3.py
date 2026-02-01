@@ -57,16 +57,16 @@ def life(lifes):
   }
   print(theMan[lifes])
 #-------------------------------------------------------------------------------
-def main(yea = 1):
-  word = randomWord(yea)
-  lengthWord = len(word)
+def main(word = "HELLO"):
+  word = word.upper()
+  lw = len(word)
   wordGuess = []
   blank = "_"
   guess = []
   lifes = 6
 
   #uhh make _ _ _ _ _
-  for i in range(lengthWord):
+  for i in range(lw):
     guess.append(blank)
 
   print("---------------------------------------\ngiven secrete word.(\"close1\" to exit)\n type all the letter to win")
@@ -89,7 +89,7 @@ def main(yea = 1):
     print("")
 
     if y < 1:
-      print("you've done it!\n----------------------")
+      print("--------- you've done it! ---------\n---------------------------------------------")
       #yea+=1
       #main(yea)
       break
@@ -101,7 +101,7 @@ def main(yea = 1):
 
       # optional
     if userInput == word:
-      print("you've done it!\n----------------------")
+      print("--------- you've done it! ---------\n---------------------------------------------")
       #yea+=1
       #main(yea)
       break
@@ -115,7 +115,7 @@ def main(yea = 1):
     # check if input in word
     elif userInput in word:
       print(f"terdapat {userInput} didalam kata tersebut. (\"close1\" to exit)")
-      for i in range(lengthWord):
+      for i in range(lw):
         if userInput == word[i] and guess[i] == "_":
           guess[i] = userInput
           y-=1
@@ -128,4 +128,4 @@ def main(yea = 1):
         print("--------- you lose ---------")
         break
       
-main()
+main("Hari")

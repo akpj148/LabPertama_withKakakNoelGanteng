@@ -49,6 +49,8 @@ def life(lifes):
   print(theMan[lifes])
 #-------------------------------------------------------------------------------
 def main(word = "HELLO"):
+  if len(word)<=1:
+    word = "HELLO"
   word = word.upper()
   lw = len(word)
   wordGuess = []
@@ -119,4 +121,4 @@ def main(word = "HELLO"):
         print("--------- you lose ---------")
         break
       
-main("Hari")
+main("ternyata")
